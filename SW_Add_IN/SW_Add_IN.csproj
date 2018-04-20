@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>1</WarningLevel>
     <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,12 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ControlsLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DataBaseDomian, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\AddFeatureContextMenu\ControlsLibrary\bin\Debug\ControlsLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="DataBaseDomian">
-      <HintPath>..\..\AddFeatureContextMenu\ControlsLibrary\bin\Debug\DataBaseDomian.dll</HintPath>
+      <HintPath>..\..\To_REMAKE\PdmWebService\DataBaseDomian\bin\Debug\DataBaseDomian.dll</HintPath>
     </Reference>
     <Reference Include="MessageLibrary">
       <HintPath>..\..\AddFeatureContextMenu\ControlsLibrary\bin\Debug\MessageLibrary.dll</HintPath>
@@ -57,10 +55,6 @@
       <HintPath>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\api\redist\SolidWorks.Interop.swpublished.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="SolidWorksLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\To_REMAKE\PdmWebService\SolidWorksLibrary\bin\Debug\SolidWorksLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -70,9 +64,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="VentsMaterials">
-      <HintPath>..\..\AddFeatureContextMenu\ControlsLibrary\bin\Debug\VentsMaterials.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
@@ -82,12 +73,31 @@
     <Compile Include="LittleTaskPane.Designer.cs">
       <DependentUpon>LittleTaskPane.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LittleTaskPane.resx">
       <DependentUpon>LittleTaskPane.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\THeme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AddFeatureContextMenu\ControlsLibrary\ControlsLibrary.csproj">
+      <Project>{e418a164-4383-42c8-b35b-82f995f96989}</Project>
+      <Name>ControlsLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

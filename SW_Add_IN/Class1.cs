@@ -40,11 +40,19 @@ namespace SW_Add_IN
             mTaskpaneView = null;        }
         private void UISetup()
         {
-            string imagePath;
-            imagePath = @"\\pdmsrv\SolidWorks Admin\AirVentsCAD_AddIN\THeme.png";
-            mTaskpaneView = SWApplication.CreateTaskpaneView2(imagePath, "AirVentsCAD");
-            //bool res = mTaskpaneView.AddCustomButton(imagePath, "Just testing");
-            mTaskpaneHost = (LittleTaskPane)mTaskpaneView.AddControl(Class1.SWTASKPANE_PROGID, "");
+            try
+            {
+                string imagePath;
+                imagePath = @"\Resources\THeme.png";
+                mTaskpaneView = SWApplication.CreateTaskpaneView2(imagePath, "AirVentsCAD");
+                //bool res = mTaskpaneView.AddCustomButton(imagePath, "Just testing");
+                mTaskpaneHost = (LittleTaskPane)mTaskpaneView.AddControl(Class1.SWTASKPANE_PROGID, "");
+            }
+            catch(Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message);
+            }
+            
         }
 
 

@@ -1,5 +1,3 @@
-copy "\\pdmsrv\SolidWorks Admin\AirVentsCAD_AddIN2\" "D:\Test\AirVentsCAD_AddIN\"
-
-C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe "D:\Test\AirVentsCAD_AddIN\SW_Add_IN.dll" /codebase
+C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe "D:\Visual Studio Projects\SW_Add_IN\SW_Add_IN\bin\Debug\SW_Add_IN.dll" /codebase
 
 @pause
