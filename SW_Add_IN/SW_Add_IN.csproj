@@ -22,7 +22,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>1</WarningLevel>
     <RegisterForComInterop>true</RegisterForComInterop>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -67,10 +68,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="LittleTaskPane.cs">
+    <Compile Include="BodyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LittleTaskPane.Designer.cs">
+    <Compile Include="BodyControl.Designer.cs">
+      <DependentUpon>BodyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeadControl.Designer.cs">
+      <DependentUpon>HeadControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LittleTaskPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\LittleTaskPane.Designer.cs">
       <DependentUpon>LittleTaskPane.cs</DependentUpon>
     </Compile>
     <Compile Include="Logger.cs" />
@@ -82,7 +95,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LittleTaskPane.resx">
+    <EmbeddedResource Include="BodyControl.resx">
+      <DependentUpon>BodyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadControl.resx">
+      <DependentUpon>HeadControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LittleTaskPane.resx">
       <DependentUpon>LittleTaskPane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,6 +119,9 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>D:\Test\AirVentsCAD_AddIN\Install.bat</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

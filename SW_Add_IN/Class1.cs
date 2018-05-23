@@ -5,7 +5,6 @@ using System.IO;
 using System.Runtime.InteropServices;
 
 
-
 namespace SW_Add_IN
 {
 
@@ -16,7 +15,10 @@ namespace SW_Add_IN
         public SldWorks SWApplication;
         private int mSWCookie;
         private TaskpaneView mTaskpaneView;
-        private LittleTaskPane mTaskpaneHost;
+        static public LittleTaskPane mTaskpaneHost;
+
+
+        int Width, Height;
 
         public bool ConnectToSW(object ThisSW, int Cookie)
         {
@@ -34,12 +36,16 @@ namespace SW_Add_IN
             return true;        }
         private void UITeardown()
         {
+
             mTaskpaneHost = null;
             mTaskpaneView.DeleteView();
             Marshal.ReleaseComObject(mTaskpaneView);
-            mTaskpaneView = null;        }
+            mTaskpaneView = null;
+
+        }
         private void UISetup()
         {
+            
             try
             {
                 string imagePath;
@@ -48,11 +54,10 @@ namespace SW_Add_IN
                 //bool res = mTaskpaneView.AddCustomButton(imagePath, "Just testing");
                 mTaskpaneHost = (LittleTaskPane)mTaskpaneView.AddControl(Class1.SWTASKPANE_PROGID, "");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 System.Windows.Forms.MessageBox.Show(e.Message);
             }
-            
         }
 
 
