@@ -34,6 +34,7 @@
             this.buildMountage = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.MainMenu = new System.Windows.Forms.Button();
+            this.buttonPanel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -88,11 +89,11 @@
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(0, 165);
+            this.button2.Location = new System.Drawing.Point(0, 201);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(274, 30);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Панели";
+            this.button2.Text = "Бескаркасная";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -100,7 +101,7 @@
             // 
             this.MainMenu.BackColor = System.Drawing.Color.White;
             this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MainMenu.Location = new System.Drawing.Point(0, 220);
+            this.MainMenu.Location = new System.Drawing.Point(0, 267);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(274, 30);
             this.MainMenu.TabIndex = 12;
@@ -108,10 +109,23 @@
             this.MainMenu.UseVisualStyleBackColor = false;
             this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
+            // buttonPanel
+            // 
+            this.buttonPanel.BackColor = System.Drawing.Color.White;
+            this.buttonPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPanel.Location = new System.Drawing.Point(0, 165);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(274, 30);
+            this.buttonPanel.TabIndex = 13;
+            this.buttonPanel.Text = "Панель";
+            this.buttonPanel.UseVisualStyleBackColor = false;
+            this.buttonPanel.Click += new System.EventHandler(this.buttonPanel_Click);
+            // 
             // HeadControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -119,7 +133,7 @@
             this.Controls.Add(this.buildSpigot);
             this.Controls.Add(this.buildMountage);
             this.Name = "HeadControl";
-            this.Size = new System.Drawing.Size(283, 262);
+            this.Size = new System.Drawing.Size(283, 300);
             this.ResumeLayout(false);
 
         }
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Button buildMountage;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button MainMenu;
+        private System.Windows.Forms.Button buttonPanel;
     }
 }

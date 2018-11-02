@@ -13,6 +13,8 @@ using ControlsLibrary.FlapBuilder;
 using ControlsLibrary.Roof;
 using ControlsLibrary.MountingFrame;
 using ControlsLibrary.Frameless;
+using ControlsLibrary.Panel50;
+using SolidWorksLibrary;
 
 namespace SW_Add_IN
 {
@@ -87,7 +89,6 @@ namespace SW_Add_IN
             LittleTaskPane.MainMenuVisible = null;
             LittleTaskPane.MainMenuVisible += new LittleTaskPane.HeadMenuOperations(LittleTaskPane.HideMainHead);
             LittleTaskPane.MainMenuVisible(sender, e);
-
         }
 
         private static void Instance_ReceivedMessage(Patterns.Observer.MessageEventArgs massage)
@@ -96,7 +97,10 @@ namespace SW_Add_IN
             {
                 Logger.Instance.ToLog($"Time:{massage.time} Message: {massage.Message}");
                 if (massage.Type == MessageType.Error)
+                {
                     MessageBox.Show(massage.Message);
+                    SolidWorksAdapter.OutLookSendMeALog(@"D:\AirVentsCAD\AddIn\Log.txt", "Some problems with SW_Add-IN");
+                }
             }
             catch (Exception ex)
             {
@@ -125,6 +129,24 @@ namespace SW_Add_IN
             LittleTaskPane.MainMenuVisible = null;
             LittleTaskPane.MainMenuVisible += new LittleTaskPane.HeadMenuOperations(LittleTaskPane.ShowMainHead);
             LittleTaskPane.MainMenuVisible(sender, e);
+            userControl.Visible = false;
+        }
+
+        private void buttonPanel_Click(object sender, EventArgs e)
+        {
+            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
+
+
+            LittleTaskPane.footer.Controls.Clear();
+            userControl = new PanelControl();
+            userControl.Dock = DockStyle.Fill;
+            LittleTaskPane.footer.Controls.Add(userControl);
+
+
+            LittleTaskPane.MainMenuVisible = null;
+            LittleTaskPane.MainMenuVisible += new LittleTaskPane.HeadMenuOperations(LittleTaskPane.HideMainHead);
+            LittleTaskPane.MainMenuVisible(sender, e);
+
         }
     }
 }

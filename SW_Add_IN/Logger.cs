@@ -21,7 +21,7 @@ namespace SW_Add_IN
                 if (rootDir == null || rootDir == string.Empty)
                 {
                     //return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                    return @"D:\Test\AirVentsCAD_AddIN";
+                    return @"D:\AirVentsCAD\AddIn";
                 }
                 return rootDir;
             }

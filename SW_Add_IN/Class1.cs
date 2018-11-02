@@ -79,5 +79,6 @@ namespace SW_Add_IN
             string keyPath = String.Format(@"SOFTWARE\SolidWorks\AddIns\{0:b}", t.GUID);
             Microsoft.Win32.Registry.LocalMachine.DeleteSubKeyTree(keyPath);
         }
+
     }
 }

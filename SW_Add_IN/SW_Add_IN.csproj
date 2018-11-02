@@ -34,13 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataBaseDomian, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\To_REMAKE\PdmWebService\DataBaseDomian\bin\Debug\DataBaseDomian.dll</HintPath>
-    </Reference>
-    <Reference Include="MessageLibrary">
-      <HintPath>..\..\AddFeatureContextMenu\ControlsLibrary\bin\Debug\MessageLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceConstants">
       <HintPath>..\..\AddFeatureContextMenu\ControlsLibrary\bin\Debug\ServiceConstants.dll</HintPath>
     </Reference>
@@ -60,11 +53,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
@@ -116,6 +106,18 @@
     <ProjectReference Include="..\..\AddFeatureContextMenu\ControlsLibrary\ControlsLibrary.csproj">
       <Project>{e418a164-4383-42c8-b35b-82f995f96989}</Project>
       <Name>ControlsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\To_REMAKE\PdmWebService\DataBaseDomian\DataBaseDomian.csproj">
+      <Project>{6ac06b1c-66f2-40e5-9b11-cbfa56b747b6}</Project>
+      <Name>DataBaseDomian</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\To_REMAKE\PdmWebService\MessageLibrary\Patterns.csproj">
+      <Project>{D0ABF979-D32B-453D-92D5-F9BC7BDEC44E}</Project>
+      <Name>Patterns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\To_REMAKE\PdmWebService\SolidWorksLibrary\SolidWorksLibrary.csproj">
+      <Project>{decc61e0-8d25-485f-99f4-d895177c7997}</Project>
+      <Name>SolidWorksLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
