@@ -33,7 +33,8 @@ namespace SW_Add_IN
         public bool DisconnectFromSW()
         {
             this.UITeardown();
-            return true;        }
+            return true;
+        }
         private void UITeardown()
         {
 

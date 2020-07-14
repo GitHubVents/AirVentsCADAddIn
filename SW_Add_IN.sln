@@ -1,19 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW_Add_IN", "SW_Add_IN\SW_Add_IN.csproj", "{BDD3348B-7589-4405-B3AE-1B77CC885B96}"
+	ProjectSection(ProjectDependencies) = postProject
+		{21A48C37-403D-4966-9414-6EA2327A204B} = {21A48C37-403D-4966-9414-6EA2327A204B}
+		{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07} = {5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsLibrary", "..\AddFeatureContextMenu\ControlsLibrary\ControlsLibrary.csproj", "{E418A164-4383-42C8-B35B-82F995F96989}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DECC61E0-8D25-485F-99F4-D895177C7997} = {DECC61E0-8D25-485F-99F4-D895177C7997}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseDomian", "..\To_REMAKE\PdmWebService\DataBaseDomian\DataBaseDomian.csproj", "{6AC06B1C-66F2-40E5-9B11-CBFA56B747B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0ABF979-D32B-453D-92D5-F9BC7BDEC44E} = {D0ABF979-D32B-453D-92D5-F9BC7BDEC44E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "..\To_REMAKE\PdmWebService\MessageLibrary\Patterns.csproj", "{D0ABF979-D32B-453D-92D5-F9BC7BDEC44E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidWorksLibrary", "..\To_REMAKE\PdmWebService\SolidWorksLibrary\SolidWorksLibrary.csproj", "{DECC61E0-8D25-485F-99F4-D895177C7997}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0ABF979-D32B-453D-92D5-F9BC7BDEC44E} = {D0ABF979-D32B-453D-92D5-F9BC7BDEC44E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceConstants", "..\To_REMAKE\PdmWebService\ServiceConstants\ServiceConstants.csproj", "{21A48C37-403D-4966-9414-6EA2327A204B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E418A164-4383-42C8-B35B-82F995F96989} = {E418A164-4383-42C8-B35B-82F995F96989}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentsMaterials - DLL", "..\To_REMAKE\PdmWebService\VentsMaterials\VentsMaterials - DLL\VentsMaterials - DLL.csproj", "{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}"
 EndProject
@@ -54,5 +70,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93FA81D4-D5B1-4C20-A41E-FCEAC13913BF}
 	EndGlobalSection
 EndGlobal

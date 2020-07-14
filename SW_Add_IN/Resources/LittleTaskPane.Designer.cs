@@ -35,8 +35,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Name = "LittleTaskPane";
-            this.Size = new System.Drawing.Size(280, 585);
+            this.Size = new System.Drawing.Size(278, 583);
             this.ResumeLayout(false);
 
         }

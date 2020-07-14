@@ -26,8 +26,15 @@ namespace SW_Add_IN
 
         public HeadControl()
         {
-            InitializeComponent();
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            try
+            {
+                InitializeComponent();
+                SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("HeadControl");
+            }
         }
 
 
@@ -36,7 +43,7 @@ namespace SW_Add_IN
             MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
 
             LittleTaskPane.footer.Controls.Clear();
-            userControl = new SpigotControl();
+            userControl = new SpigotControl(string.Empty);
             userControl.Dock = DockStyle.Fill;
             LittleTaskPane.footer.Controls.Add(userControl);
 
@@ -50,7 +57,7 @@ namespace SW_Add_IN
             MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
 
             LittleTaskPane.footer.Controls.Clear();
-            userControl = new RoofControl();
+            userControl = new RoofControl(string.Empty);
             userControl.Dock = DockStyle.Fill;
             LittleTaskPane.footer.Controls.Add(userControl);
 
@@ -62,16 +69,25 @@ namespace SW_Add_IN
 
         private void buildFlapBtn_Click(object sender, EventArgs e)
         {
-            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
 
-            LittleTaskPane.footer.Controls.Clear();
-            userControl = new FlapBuilderControl();
-            userControl.Dock = DockStyle.Fill;
-            LittleTaskPane.footer.Controls.Add(userControl);
+            try
+            {
 
-            LittleTaskPane.MainMenuVisible = null;
-            LittleTaskPane.MainMenuVisible += new LittleTaskPane.HeadMenuOperations(LittleTaskPane.HideMainHead);
-            LittleTaskPane.MainMenuVisible(sender, e);
+                MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
+
+                LittleTaskPane.footer.Controls.Clear();
+                userControl = new FlapBuilderControl(string.Empty);
+                userControl.Dock = DockStyle.Fill;
+                LittleTaskPane.footer.Controls.Add(userControl);
+
+                LittleTaskPane.MainMenuVisible = null;
+                LittleTaskPane.MainMenuVisible += new LittleTaskPane.HeadMenuOperations(LittleTaskPane.HideMainHead);
+                LittleTaskPane.MainMenuVisible(sender, e);
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show(w.Message);
+            }
         }
 
 
@@ -81,7 +97,7 @@ namespace SW_Add_IN
             
 
             LittleTaskPane.footer.Controls.Clear();
-            userControl = new MountingFrame();
+            userControl = new MountingFrame(string.Empty);
             userControl.Dock = DockStyle.Fill;
             LittleTaskPane.footer.Controls.Add(userControl);
 
@@ -138,7 +154,7 @@ namespace SW_Add_IN
 
 
             LittleTaskPane.footer.Controls.Clear();
-            userControl = new PanelControl();
+            userControl = new PanelControl(string.Empty);
             userControl.Dock = DockStyle.Fill;
             LittleTaskPane.footer.Controls.Add(userControl);
 
