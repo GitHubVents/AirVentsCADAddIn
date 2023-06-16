@@ -30,6 +30,7 @@ namespace SW_Add_IN
             {
                 InitializeComponent();
                 SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+                MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
             }
             catch (Exception e)
             {
@@ -40,7 +41,6 @@ namespace SW_Add_IN
 
         private void buildSpigot_Click(object sender, EventArgs e)
         {
-            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
 
             LittleTaskPane.footer.Controls.Clear();
             userControl = new SpigotControl(string.Empty);
@@ -54,8 +54,6 @@ namespace SW_Add_IN
 
         private void buildRoofBtn_Click(object sender, EventArgs e)
         {
-            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
-
             LittleTaskPane.footer.Controls.Clear();
             userControl = new RoofControl(string.Empty);
             userControl.Dock = DockStyle.Fill;
@@ -72,8 +70,6 @@ namespace SW_Add_IN
 
             try
             {
-
-                MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
 
                 LittleTaskPane.footer.Controls.Clear();
                 userControl = new FlapBuilderControl(string.Empty);
@@ -93,8 +89,6 @@ namespace SW_Add_IN
 
         private void buildMountage_Click_1(object sender, EventArgs e)
         {
-            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
-            
 
             LittleTaskPane.footer.Controls.Clear();
             userControl = new MountingFrame(string.Empty);
@@ -115,7 +109,7 @@ namespace SW_Add_IN
                 if (massage.Type == MessageType.Error)
                 {
                     MessageBox.Show(massage.Message);
-                    SolidWorksAdapter.OutLookSendMeALog(@"D:\AirVentsCAD\AddIn\Log.txt", "Some problems with SW_Add-IN");
+                    SolidWorksAdapter.OutLookSendMeALog(@"С:\AirVentsCAD\AddIn\Log.txt", "Some problems with SW_Add-IN");
                 }
             }
             catch (Exception ex)
@@ -126,9 +120,6 @@ namespace SW_Add_IN
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
-
-
             LittleTaskPane.footer.Controls.Clear();
             userControl = new FramelessBlockControl();
             userControl.Dock = DockStyle.Fill;
@@ -150,8 +141,6 @@ namespace SW_Add_IN
 
         private void buttonPanel_Click(object sender, EventArgs e)
         {
-            MessageObserver.Instance.ReceivedMessage += Instance_ReceivedMessage;
-
 
             LittleTaskPane.footer.Controls.Clear();
             userControl = new PanelControl(string.Empty);

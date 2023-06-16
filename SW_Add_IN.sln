@@ -9,11 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW_Add_IN", "SW_Add_IN\SW_A
 		{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07} = {5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsLibrary", "..\AddFeatureContextMenu\ControlsLibrary\ControlsLibrary.csproj", "{E418A164-4383-42C8-B35B-82F995F96989}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DECC61E0-8D25-485F-99F4-D895177C7997} = {DECC61E0-8D25-485F-99F4-D895177C7997}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseDomian", "..\To_REMAKE\PdmWebService\DataBaseDomian\DataBaseDomian.csproj", "{6AC06B1C-66F2-40E5-9B11-CBFA56B747B6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D0ABF979-D32B-453D-92D5-F9BC7BDEC44E} = {D0ABF979-D32B-453D-92D5-F9BC7BDEC44E}
@@ -27,11 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidWorksLibrary", "..\To_
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceConstants", "..\To_REMAKE\PdmWebService\ServiceConstants\ServiceConstants.csproj", "{21A48C37-403D-4966-9414-6EA2327A204B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E418A164-4383-42C8-B35B-82F995F96989} = {E418A164-4383-42C8-B35B-82F995F96989}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentsMaterials - DLL", "..\To_REMAKE\PdmWebService\VentsMaterials\VentsMaterials - DLL\VentsMaterials - DLL.csproj", "{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsLibrary", "ControlsLibraryPorSolid\ControlsLibrary.csproj", "{E418A164-4383-42C8-B35B-82F995F96989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +37,6 @@ Global
 		{BDD3348B-7589-4405-B3AE-1B77CC885B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDD3348B-7589-4405-B3AE-1B77CC885B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDD3348B-7589-4405-B3AE-1B77CC885B96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E418A164-4383-42C8-B35B-82F995F96989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E418A164-4383-42C8-B35B-82F995F96989}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E418A164-4383-42C8-B35B-82F995F96989}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E418A164-4383-42C8-B35B-82F995F96989}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AC06B1C-66F2-40E5-9B11-CBFA56B747B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AC06B1C-66F2-40E5-9B11-CBFA56B747B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AC06B1C-66F2-40E5-9B11-CBFA56B747B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +57,10 @@ Global
 		{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BDD7CBB-5DED-4C1F-9CB2-432B9257FD07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E418A164-4383-42C8-B35B-82F995F96989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E418A164-4383-42C8-B35B-82F995F96989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E418A164-4383-42C8-B35B-82F995F96989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E418A164-4383-42C8-B35B-82F995F96989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E418A164-4383-42C8-B35B-82F995F96989}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlsLibrary</RootNamespace>
+    <AssemblyName>ControlsLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataBaseDomian">
+      <HintPath>..\..\..\To_REMAKE\PdmWebService\DataBaseDomian\bin\Debug\DataBaseDomian.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\To_REMAKE\PdmWebService\MessageLibrary\bin\Debug\MessageLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SolidWorks.Interop.sldworks">
+      <HintPath>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SolidWorks.Interop.sldworks.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlapBuilder\FlapBuilderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FlapBuilder\FlapBuilderControl.Designer.cs">
+      <DependentUpon>FlapBuilderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frameless\CutBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frameless\CutBack.Designer.cs">
+      <DependentUpon>CutBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frameless\CutFront.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frameless\CutFront.Designer.cs">
+      <DependentUpon>CutFront.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frameless\FramelessBlockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frameless\FramelessBlockControl.Designer.cs">
+      <DependentUpon>FramelessBlockControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MountingFrame\MountingFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MountingFrame\MountingFrame.Designer.cs">
+      <DependentUpon>MountingFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelControl.Designer.cs">
+      <DependentUpon>PanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RealiseBuilderBehaviour.cs" />
+    <Compile Include="Roof\RoofControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Roof\RoofControl.Designer.cs">
+      <DependentUpon>RoofControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spigot\SpigotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Spigot\SpigotControl.Designer.cs">
+      <DependentUpon>SpigotControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlapBuilder\FlapBuilderControl.resx">
+      <DependentUpon>FlapBuilderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frameless\CutBack.resx">
+      <DependentUpon>CutBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frameless\CutFront.resx">
+      <DependentUpon>CutFront.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frameless\FramelessBlockControl.resx">
+      <DependentUpon>FramelessBlockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MountingFrame\MountingFrame.resx">
+      <DependentUpon>MountingFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelControl.resx">
+      <DependentUpon>PanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roof\RoofControl.resx">
+      <DependentUpon>RoofControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spigot\SpigotControl.resx">
+      <DependentUpon>SpigotControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\MountingFrame\10-4-800-650.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MountingFrame\10-4-800-650-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MountingFrame\10-4-800-650-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MountingFrame\10-4-800-1000-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roof\01.PNG" />
+    <None Include="Resources\Roof\02.PNG" />
+    <None Include="Resources\Roof\03.PNG" />
+    <None Include="Resources\Roof\04.PNG" />
+    <None Include="Resources\Roof\05.PNG" />
+    <None Include="Resources\Roof\06.PNG" />
+    <Content Include="Resources\Flap\11-265.png" />
+    <Content Include="Resources\Spigot\12-30-1300-600.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\To_REMAKE\PdmWebService\ServiceConstants\ServiceConstants.csproj">
+      <Project>{21a48c37-403d-4966-9414-6ea2327a204b}</Project>
+      <Name>ServiceConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\To_REMAKE\PdmWebService\SolidWorksLibrary\SolidWorksLibrary.csproj">
+      <Project>{decc61e0-8d25-485f-99f4-d895177c7997}</Project>
+      <Name>SolidWorksLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
